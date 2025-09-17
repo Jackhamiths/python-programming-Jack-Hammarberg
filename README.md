@@ -1,1 +1,1 @@
-# python-programming-Jack-Hammarberg
+I detta repot kommer jag att ladda upp alla mina pyhton övningar
