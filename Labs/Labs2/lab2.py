@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import os
 
 # https://www.w3schools.com/python/pandas/pandas_csv.asp 
+# https://www.geeksforgeeks.org/python/get-current-directory-python/
 currDir = os.path.abspath(os.path.dirname(__file__))
 trainingSet = pd.read_csv(f"{currDir}/Lab2-data-and-testpoints/datapoints.csv")
 testSet = pd.read_csv(f"{currDir}/Lab2-data-and-testpoints/testpoints.csv")
