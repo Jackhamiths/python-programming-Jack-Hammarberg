@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # https://www.w3schools.com/python/pandas/pandas_csv.asp 
-trainingSet = pd.read_csv(r"C:\Users\Jack\python-programming-Jack-Hammarberg\Labs\Lab2-data-and-testpoints\datapoints.csv")
-testSet = pd.read_csv(r"C:\Users\Jack\python-programming-Jack-Hammarberg\Labs\Lab2-data-and-testpoints\testpoints.csv")
+trainingSet = pd.read_csv(r"C:\Users\Jack\python-programming-Jack-Hammarberg\Labs\Labs2\Lab2-data-and-testpoints\datapoints.csv")
+testSet = pd.read_csv(r"C:\Users\Jack\python-programming-Jack-Hammarberg\Labs\Labs2\Lab2-data-and-testpoints\testpoints.csv")
 
 # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.scatter.html
 df = pd.DataFrame(trainingSet,
