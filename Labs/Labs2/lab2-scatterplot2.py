@@ -21,7 +21,8 @@ test_df = pd.DataFrame(testSet,
 combined_data = pd.concat([train_df, test_df])
 
 
-
+# this code nolonger works as it relies on having the pokemons column with the value 2 which is not optimal 
+# this was jsut me testing some stuff for fun xD
 sns.scatterplot(data=combined_data,
     x='width',
     y='height',

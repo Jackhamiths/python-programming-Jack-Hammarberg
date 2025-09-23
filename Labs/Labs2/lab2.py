@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 import numpy as np
+from sklearn.neighbors import KNeighborsClassifier
 
 # https://www.w3schools.com/python/pandas/pandas_csv.asp 
 # https://www.geeksforgeeks.org/python/get-current-directory-python/
@@ -15,7 +16,7 @@ train_df = pd.DataFrame(trainingSet,
 
 
 # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.scatter.html
-# pichus are blue and pikachus are red
+# pichus are blue represented by 0 and pikachus are red represented by 1
 train_df.plot.scatter(
     x='width',
     y='height',
@@ -26,8 +27,16 @@ train_df.plot.scatter(
 plt.show()
 
 
+# https://www.geeksforgeeks.org/python/calculate-the-euclidean-distance-using-numpy/ 
+d = np.sqrt(np.sum((trainingSet - testSet)**2))
+print(d)
 
-
-
-
-
+# https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier
+pokemon_dict = {1:'Pikachu',0:'Pichu'}
+test = pd.read_csv(f"{currDir}/Lab2-data-and-testpoints/testpoints.csv")
+train = pd.read_csv(f"{currDir}/Lab2-data-and-testpoints/datapoints.csv")
+X = train[['width','height']]
+y = train['pokemons']
+neigh = KNeighborsClassifier(n_neighbors=1)
+neigh.fit(X, y)
+print(neigh.predict(test))
